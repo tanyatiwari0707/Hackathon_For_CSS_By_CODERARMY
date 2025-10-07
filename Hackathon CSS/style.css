@@ -200,6 +200,18 @@ section {
   backdrop-filter: blur(15px);
   transition: transform 0.4s, box-shadow 0.4s;
 }
+.course-card>img{
+  margin-top: 20px;
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid #380312;
+}
+.course-card>img:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #001f3f;
+  cursor: pointer;
+}
 
 .course-card:hover {
   transform: translateY(-10px);
@@ -423,12 +435,201 @@ textarea {
 }
 
 
-/* Responsive Design */
-@media (max-width:600px) {
-   .navbar{
+/* RESPONSIVE DESIGN */
+
+/* 🌐 Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 20px 80px;
     flex-direction: column;
-    overflow-y: hidden;
-   }
-  
-   
 }
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .course-container,
+  .project-container,
+  .instructor-container {
+    gap: 50px;
+  }
+
+  .course-card,
+  .project-card,
+  .instructor-card {
+    width: 280px;
+  }
+
+
+/*  Tablet Devices (768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 80px 30px;
+  }
+
+  .course-container,
+  .project-container,
+  .instructor-container {
+    gap: 30px;
+  }
+
+  .course-card,
+  .project-card,
+  .instructor-card {
+    width: 45%;
+  }
+
+  .contact-section {
+    width: 90%;
+    padding: 30px;
+  }
+
+  
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 25px;
+  }
+
+  .navbar ul {
+  
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+  
+  }
+
+  .navbar a {
+    font-size: 0.95rem;
+  }
+
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Section Spacing */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* Course & Project Cards */
+  .course-container,
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card
+   {
+    width: 70%;
+    height: 300px;
+  }
+
+  /* Instructor Cards */
+  .instructor-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instructor-card {
+    width: 90%;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Contact Form */
+  .contact-section {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .contact-form .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 0.9rem;
+  }
+
+  .send-btn {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
+
+/* Extra Small Devices (up to 480px) */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .course-card h3,
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .course-card p,
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
